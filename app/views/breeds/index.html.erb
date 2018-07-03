@@ -1,9 +1,11 @@
 <div class="dog">
 
   <h1>It's a dog</h1>
-
-  <h3><%= @breed.name.humanize %></h3>
-
-  <%= image_tag @breed.pic_url %>
+  <%= form_tag( {:action => 'index'}, :method => 'GET' ) do %>
+    <h3>Bread: <%= select_tag "breed", options_for_select(breed_list, @breed_name) %></h3>
+    <%= submit_tag( "Get Random Dog" ) %>
+  <% end %>
+  <br/>
+  <%= image_tag @dog_url %>
 
 </div>
