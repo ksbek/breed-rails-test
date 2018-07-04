@@ -2,7 +2,7 @@
 
   <h1>It's a dog</h1>
   <%= form_tag( {:action => 'index'}, :method => 'GET' ) do %>
-    <h3>Bread: <%= select_tag "breed", options_for_select(breed_list, @breed_name) %></h3>
+    <h3>Breed: <%= select_tag "breed", options_for_select(breed_list, @breed_name) %></h3>
     <%= submit_tag( "Get Random Dog" ) %>
   <% end %>
   <br/>
